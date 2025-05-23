@@ -1,16 +1,13 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  output: 'export',  // Enable static exports
-  basePath: '/binayak-portfolio', // Your repository name
+  output: 'export',
+  basePath: '/binayak-portfolio',
+  assetPrefix: '/binayak-portfolio/',
   images: {
-    unoptimized: true, // Required for static export
+    unoptimized: true,
   },
-  webpack: (config) => {
-    config.resolve.alias.canvas = false;
-    config.resolve.alias.encoding = false;
-    return config;
-  }
+  reactStrictMode: true,
 };
 
 export default nextConfig;

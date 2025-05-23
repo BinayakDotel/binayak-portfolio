@@ -30,7 +30,7 @@ export default function AboutPage() {
             <div className="md:col-span-1">
               <div className="relative w-48 h-48 sm:w-64 sm:h-64 mx-auto rounded-full overflow-hidden border-4 border-blue-500 shadow-lg">
                 <Image
-                  src="/profile.jpeg"
+                  src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/profile.jpeg`}
                   alt={personalInfo.name}
                   fill
                   sizes="(max-width: 768px) 192px, 256px"

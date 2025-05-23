@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { getCVInfo } from '@/utils/data';
+import { PDFDocumentProxy, RenderTask } from 'pdfjs-dist';
 
 export default function CVPage() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -10,8 +11,8 @@ export default function CVPage() {
   const cvInfo = getCVInfo();
 
   useEffect(() => {
-    let pdfDoc: any = null;
-    let renderTask: any = null;
+    let pdfDoc: PDFDocumentProxy | null = null;
+    let renderTask: RenderTask | null = null;
 
     const renderPDF = async () => {
       try {
@@ -88,7 +89,7 @@ export default function CVPage() {
         pdfDoc.destroy();
       }
     };
-  }, []);
+  }, [cvInfo.file]);
 
   const handleDownload = () => {
     try {

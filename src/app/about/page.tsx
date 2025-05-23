@@ -11,10 +11,9 @@ export default function AboutPage() {
   const aboutInfo = portfolioData.about;
 
   useEffect(() => {
-    console.log('Portfolio Data:', portfolioData);
-    console.log('Personal Info:', personalInfo);
-    console.log('About Info:', aboutInfo);
-  }, []);
+    // some logic using aboutInfo, personalInfo, portfolioData
+  }, [aboutInfo, personalInfo, portfolioData]);
+  
 
   if (!personalInfo || !aboutInfo) {
     return <div>Loading...</div>;

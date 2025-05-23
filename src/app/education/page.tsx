@@ -55,7 +55,7 @@ export default function EducationPage() {
                 </div>
                 <ul className="list-disc list-inside space-y-2 ml-4">
                   <li className="text-gray-700 dark:text-gray-300">
-                    <span className="font-semibold">1st Runner Up</span> in NEXT Hackathon - Project: "AR for Education" (Augmented Reality)
+                    <span className="font-semibold">1st Runner Up</span> in NEXT Hackathon - Project: &ldquo;AR for Education&rdquo; (Augmented Reality)
                   </li>
                 </ul>
               </div>

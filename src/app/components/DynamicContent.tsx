@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from "react";
-import { getNavigation, getAboutInfo } from "@/utils/data";
+import { getNavigation } from "@/utils/data";
 import dynamic from 'next/dynamic';
 
 // Dynamically import client components with no SSR
@@ -12,7 +12,6 @@ const EducationPage = dynamic(() => import('../education/page'), { ssr: false })
 const AboutPage = dynamic(() => import('../about/page'), { ssr: false });
 
 export default function DynamicContent() {
-  const aboutInfo = getAboutInfo();
   const [activeSection, setActiveSection] = useState("home");
   const navigation = getNavigation();
 

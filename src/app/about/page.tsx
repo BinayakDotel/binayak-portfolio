@@ -33,6 +33,8 @@ export default function AboutPage() {
                   src="/profile.jpeg"
                   alt={personalInfo.name}
                   fill
+                  sizes="(max-width: 768px) 192px, 256px"
+                  quality={90}
                   className="object-cover"
                   priority
                 />

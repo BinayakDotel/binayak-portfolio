@@ -1,14 +1,18 @@
 {
   "name": "binayak-portfolio",
+  "homepage": "https://binayakdotel.github.io/binayak-portfolio/",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "gh-pages": "^6.3.0",
     "next": "15.3.2",
     "pdfjs-dist": "^4.10.38",
     "react": "^19.0.0",

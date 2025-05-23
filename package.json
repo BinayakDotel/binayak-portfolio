@@ -9,8 +9,8 @@
     "export": "next export",
     "start": "next start",
     "lint": "next lint",
-    "predeploy": "npm run build && npm run export",
-    "deploy": "gh-pages -d build"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d out"
   },
   "dependencies": {
     "gh-pages": "^6.3.0",

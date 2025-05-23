@@ -1,0 +1,200 @@
+{
+  "personal": {
+    "name": "Binayak Dotel",
+    "title": "Software Engineer",
+    "location": "Bhaktapur, Nepal",
+    "email": "binayakdotel01.bd@gmail.com",
+    "social": {
+      "linkedin": "https://www.linkedin.com/in/binayak-dotel-b22728146/",
+      "github": "https://github.com/BinayakDotel"
+    }
+  },
+  "navigation": [
+    {
+      "label": "Home",
+      "path": "/"
+    },
+    {
+      "label": "Projects",
+      "path": "/projects"
+    },
+    {
+      "label": "Work History",
+      "path": "/work-history"
+    },
+    {
+      "label": "Education",
+      "path": "/education"
+    },
+    {
+      "label": "Resume",
+      "path": "/resume"
+    },
+    {
+      "label": "About Me",
+      "path": "/about"
+    }
+  ],
+  "projects": [
+    {
+      "id": 4,
+      "title": "Space Cluster - Merge & Drop",
+      "description": "A strategic space-themed mobile game where players merge planets and create stars to build their own galaxy. As a galactic architect, players combine smaller celestial bodies into more powerful ones, unlocking new cosmic wonders. The game features challenging gameplay mechanics with balanced spawn rates, requiring strategic thinking to progress. Built with Unity, it offers an engaging experience with vibrant visuals and mesmerizing effects, making it both easy to play yet challenging to master.",
+      "technologies": ["Unity", "C#", "Mobile Game Development", "Game Design", "UI/UX", "Game Physics"],
+      "image": "/projects/project4.jpg",
+      "github": "https://gitlab.com/binayak01.bd/space-cluster",
+      "live": "https://pixelyardstudios.itch.io/space-cluster-merge-drop"
+    },
+    {
+      "id": 1,
+      "title": "RTMotionCapture-Animation",
+      "description": "A real-time motion capture system that revolutionizes 3D animation by using computer vision instead of expensive motion capture suits. The system captures human movement through a simple camera, processes it using pose estimation technology to detect key body points, and generates 3D animations in real-time. Built with a client-server architecture, it uses Python for pose estimation and Unity for 3D rendering, communicating through JSON for seamless data transfer. This innovative solution makes professional-quality motion capture accessible without the need for specialized equipment or motion tracking suits.",
+      "technologies": ["Unity", "Python", "Computer Vision", "Pose Estimation", "JSON", "Client-Server Architecture"],
+      "image": "/projects/project1.jpg",
+      "github": "https://github.com/BinayakDotel/RTMotionCapture-Animation",
+      "live": null
+    },
+    {
+      "id": 2,
+      "title": "G_Engine-Opengl",
+      "description": "A learning project focused on understanding the fundamentals of graphics programming and game engine architecture using OpenGL. This engine implements core 3D graphics concepts including vertex and index buffers, normal mapping, camera systems with both perspective and orthographic projections, and basic rendering pipeline. Built as a hands-on exploration of computer graphics principles, this project serves as a practical reference for understanding how modern game engines handle 3D rendering at a lower level.",
+      "technologies": ["OpenGL", "C++", "Computer Graphics", "3D Mathematics", "Game Engine Architecture"],
+      "image": "/projects/project2.jpg",
+      "github": "https://github.com/BinayakDotel/G_Engine-Opengl",
+      "live": null
+    },
+    {
+      "id": 3,
+      "title": "SRGANProgram",
+      "description": "A college project implementing Super-Resolution using Generative Adversarial Networks (GANs) to enhance image quality. The system takes low-resolution images as input and generates high-resolution versions while preserving and enhancing details. The project involved training a custom GAN model with a generator network that creates high-quality images and a discriminator network that helps improve the realism of the generated images. This implementation demonstrates practical applications of deep learning in image processing and enhancement.",
+      "technologies": ["Python", "TensorFlow", "GAN", "Deep Learning", "Image Processing", "Computer Vision"],
+      "image": "/projects/project3.jpg",
+      "github": "https://github.com/BinayakDotel/SRGANProgram",
+      "live": null
+    }
+  ],
+  "about": {
+    "summary": "A passionate software engineer with expertise in game development, computer vision, and AI technologies. Currently working as a Senior Software Engineer at Earth9 Inc., where I contribute to various projects using Unity and Unreal Engine. I have a strong interest in computer vision and motion capture technologies, having developed a real-time motion capture system. I also work extensively with AI models and tools like ComfyUI for setting up and customizing various models including WAN, LoRAs, and SDXL.",
+    "skills": [
+      {
+        "category": "Game Development",
+        "items": [
+          "Unity",
+          "Unreal Engine",
+          "C#",
+          "C++",
+          "Procedural Generation",
+          "Game Physics",
+          "3D Graphics"
+        ]
+      },
+      {
+        "category": "Computer Vision & AI",
+        "items": [
+          "Python",
+          "OpenCV",
+          "TensorFlow",
+          "Motion Capture",
+          "Real-time Processing",
+          "Computer Vision Algorithms"
+        ]
+      },
+      {
+        "category": "AI & Machine Learning",
+        "items": [
+          "ComfyUI",
+          "Stable Diffusion",
+          "SDXL",
+          "LoRAs",
+          "WAN Models",
+          "Model Fine-tuning",
+          "AI Workflow Automation"
+        ]
+      },
+      {
+        "category": "Web Development",
+        "items": [
+          "React",
+          "Next.js",
+          "TypeScript",
+          "Node.js",
+          "Tailwind CSS",
+          "REST APIs"
+        ]
+      },
+      {
+        "category": "Tools & Technologies",
+        "items": [
+          "Git",
+          "Docker",
+          "VS Code",
+          "Jira",
+          "Agile Methodologies",
+          "CI/CD"
+        ]
+      }
+    ],
+    "experience": [
+      {
+        "title": "Senior Software Engineer",
+        "company": "Earth9 Inc.",
+        "period": "2022-Present",
+        "description": "Led development of multiple advanced systems and tools across Unity, Unreal Engine, and Blender.",
+        "projects": [
+          {
+            "name": "Procedural World Generation System (Unity)",
+            "achievements": [
+              "Developed a sophisticated system that generates detailed 3D terrain and building layouts from real-world coordinates",
+              "Integrated OpenStreetMap data for accurate building placement and urban planning",
+              "Engineered a custom 2D-to-3D building construction pipeline with dynamic architectural features",
+              "Implemented complex systems for wall generation, window/door placement, and material management"
+            ]
+          },
+          {
+            "name": "Interactive Level Editor (Unreal Engine)",
+            "achievements": [
+              "Architected a comprehensive level editor tool enabling non-technical users to create complex game environments",
+              "Implemented real-time level construction with interactive elements, NPCs, and environmental storytelling",
+              "Developed systems for placing and configuring game elements including lasers, walls, blocks, and hidden treasures",
+              "Created a dynamic data processing pipeline for real-time level generation in Unreal Engine"
+            ]
+          },
+          {
+            "name": "Automated Movie Production Pipeline (Blender)",
+            "achievements": [
+              "Developed an automated content generation system based on script analysis",
+              "Integrated motion capture and lip-sync systems for character animation",
+              "Engineered a procedural shot generation system for efficient video production",
+              "Created a streamlined pipeline for rendering and post-processing"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Unity Game Developer",
+        "company": "Aastav",
+        "period": "2020 - 2022",
+        "description": "Full-stack mobile game development with focus on user engagement and monetization.",
+        "achievements": [
+          "Developed and maintained multiple mobile games with custom UI/UX frameworks",
+          "Implemented real-time leaderboard systems and core gameplay mechanics",
+          "Integrated Firebase for backend services and in-app purchases",
+          "Engineered Unity Ads integration and reward systems for optimal monetization",
+          "Collaborated with cross-functional teams to deliver polished, market-ready mobile games"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Bachelor of Engineering in Software Engineering",
+        "institution": "Nepal College of Information Technology",
+        "period": "2017 - 2022",
+        "description": "Relevant coursework and achievements"
+      }
+    ]
+  },
+  "cv": {
+    "file": "/Binayak Dotel Resume.pdf",
+    "lastUpdated": "2025-05-21"
+  }
+} 

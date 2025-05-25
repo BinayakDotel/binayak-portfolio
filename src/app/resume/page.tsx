@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { getCVInfo } from '@/utils/data';
 import { PDFDocumentProxy, RenderTask } from 'pdfjs-dist';
 
 export default function CVPage() {

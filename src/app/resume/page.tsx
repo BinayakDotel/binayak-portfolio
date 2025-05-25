@@ -8,7 +8,6 @@ export default function CVPage() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const cvInfo = getCVInfo();
 
   useEffect(() => {
     let pdfDoc: PDFDocumentProxy | null = null;

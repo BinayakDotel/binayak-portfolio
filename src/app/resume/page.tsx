@@ -21,12 +21,12 @@ export default function CVPage() {
         const pdfjsLib = await import('pdfjs-dist');
         const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
         
-        // Use the worker from public directory
-        const workerPath = `${basePath}/pdfjs/pdf.worker.min.mjs`;
+        // Use the worker from public directory with correct base path
+        const workerPath = `${window.location.origin}${basePath}/pdfjs/pdf.worker.min.mjs`;
         console.log('Worker path:', workerPath);
         pdfjsLib.GlobalWorkerOptions.workerSrc = workerPath;
 
-        // Load the PDF document
+        // Load the PDF document with correct base path
         const pdfPath = `${basePath}/Binayak Dotel Resume.pdf`;
         console.log('Loading PDF from:', pdfPath);
 

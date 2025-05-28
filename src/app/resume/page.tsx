@@ -20,16 +20,13 @@ export default function CVPage() {
         // Load PDF.js
         const pdfjsLib = await import('pdfjs-dist');
         
-        // Get base path from environment variable
-        const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
-        console.log('Base path:', basePath); // Debug log
+        // Always use /binayak-portfolio as base path since that's how local is configured
+        const basePath = '/binayak-portfolio';
+        console.log('Base path:', basePath);
         
         // Construct the full worker URL
-        const workerUrl = new URL(
-          `${basePath}/pdfjs/pdf.worker.min.mjs`,
-          window.location.origin + '/'
-        ).href;
-        console.log('Worker URL:', workerUrl); // Debug log
+        const workerUrl = `${window.location.origin}${basePath}/pdfjs/pdf.worker.min.mjs`;
+        console.log('Worker URL:', workerUrl);
         
         pdfjsLib.GlobalWorkerOptions.workerSrc = workerUrl;
 

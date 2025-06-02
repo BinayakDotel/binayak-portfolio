@@ -79,7 +79,7 @@ export default function CVPage() {
 
   const handleDownload = () => {
     try {
-      const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+      const basePath = '/binayak-portfolio';
       const link = document.createElement('a');
       link.href = `${basePath}/Binayak Dotel Resume.pdf`;
       link.download = 'Binayak Dotel Resume.pdf';

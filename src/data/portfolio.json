@@ -23,6 +23,10 @@
       "path": "/work-history"
     },
     {
+      "label": "Work In Progress",
+      "path": "/work-in-progress"
+    },
+    {
       "label": "Education",
       "path": "/education"
     },
@@ -70,6 +74,17 @@
       "technologies": ["Python", "TensorFlow", "GAN", "Deep Learning", "Image Processing", "Computer Vision"],
       "image": "/projects/project3.jpg",
       "github": "https://github.com/BinayakDotel/SRGANProgram",
+      "live": null
+    }
+  ],
+  "workInProgress": [
+    {
+      "id": 1,
+      "title": "Interactive NPC Dialogue System",
+      "description": "This project focuses on building a real-time conversational system for non-player characters (NPCs). Players can engage in natural dialogue with NPCs to obtain information, guidance, or context about the game world. For example, a player might approach an NPC and ask for directions to the old vintage house in town, and the NPC will respond appropriately. The system is designed to handle a wide range of player queries, enabling NPCs to provide dynamic, context-aware responses that enhance immersion and storytelling.",
+      "technologies": ["Unreal Engine", "C++", "Real-Time Interaction", "NPC", "AI", "Game Development"],
+      "image": "/projects/project5.jpg",
+      "github": "",
       "live": null
     }
   ],

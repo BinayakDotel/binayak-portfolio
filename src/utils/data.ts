@@ -18,6 +18,10 @@ export function getProjects() {
   return portfolioData.projects;
 }
 
+export function getWorkInProgress() {
+  return portfolioData.workInProgress;
+}
+
 export function getAboutInfo() {
   return portfolioData.about;
 }

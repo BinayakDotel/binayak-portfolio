@@ -10,6 +10,7 @@ const PDFViewer = dynamic(() => import('../resume/page'), { ssr: false });
 const WorkHistoryPage = dynamic(() => import('../work-history/page'), { ssr: false });
 const EducationPage = dynamic(() => import('../education/page'), { ssr: false });
 const AboutPage = dynamic(() => import('../about/page'), { ssr: false });
+const WorkInProgressPage = dynamic(() => import('../work-in-progress/page'), { ssr: false });
 
 export default function DynamicContent() {
   const [activeSection, setActiveSection] = useState("home");
@@ -38,6 +39,8 @@ export default function DynamicContent() {
         return <WorkHistoryPage />;
       case "education":
         return <EducationPage />;
+      case "work-in-progress":
+        return <WorkInProgressPage />;
       default:
         return null;
     }
@@ -57,9 +60,12 @@ export default function DynamicContent() {
               <button
                 key={item.path}
                 onClick={() => setActiveSection(getPathKey(item.path))}
-                className={`text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 font-medium ${
-                  activeSection === getPathKey(item.path) ? "text-blue-600 dark:text-blue-400" : ""
+                className={`px-3 py-2 rounded-md font-medium transition-colors ${
+                  activeSection === getPathKey(item.path)
+                    ? "bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300"
+                    : "text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400"
                 }`}
+                aria-current={activeSection === getPathKey(item.path) ? "page" : undefined}
               >
                 {item.label}
               </button>

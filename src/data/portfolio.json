@@ -80,9 +80,9 @@
   "workInProgress": [
     {
       "id": 1,
-      "title": "Interactive NPC Dialogue System",
-      "description": "This project focuses on building a real-time conversational system for non-player characters (NPCs). Players can engage in natural dialogue with NPCs to obtain information, guidance, or context about the game world. For example, a player might approach an NPC and ask for directions to the old vintage house in town, and the NPC will respond appropriately. The system is designed to handle a wide range of player queries, enabling NPCs to provide dynamic, context-aware responses that enhance immersion and storytelling.",
-      "technologies": ["Unreal Engine", "C++", "Real-Time Interaction", "NPC", "AI", "Game Development"],
+      "title": "Voice-Controlled Action System (Prototype for Interactive NPC Dialogue)",
+      "description": "Developing a real-time voice-to-action framework where spoken player commands are transcribed, mapped to structured actions, and executed on a character within the game world. The current implementation supports core navigation commands to move the character in 4 differnt directions, enabling natural language voice control of in-game entities. The pipeline integrates speech-to-text transcription with an intent recognition agent that classifies commands into actionable game events. This project serves as the foundation for a broader research direction: extending the system into a fully interactive NPC dialogue model where players can use unconstrained language to ask questions, request directions, or engage in narrative-driven conversations with non-player characters. By combining speech processing, real-time action mapping, and dialogue management, this work-in-progress bridges the gap between traditional command-based input and context-aware, AI-driven game interaction.",
+      "technologies": ["Godot Engine", "GDScript", "Speech-to-Text", "Intent Recognition", "Real-Time Interaction", "AI Agents"],
       "image": "/projects/project5.jpg",
       "github": "",
       "live": null

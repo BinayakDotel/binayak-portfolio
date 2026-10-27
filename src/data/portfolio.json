@@ -14,7 +14,7 @@
   },
   "hero": {
     "headline": "I build software, from AI agents to games.",
-    "lede": "Software engineer in Nepal with four years of remote work for a US company. I build AI agent systems and backend services, and I previously shipped Unity mobile games. In my own time I still make games and small tools.",
+    "lede": "Software engineer with 4+ years of experience. I build AI agent systems, softwares, backend services. In my own time I still make games and small tools and products that solves real problems",
     "facts": [
       {
         "label": "Now",
@@ -143,7 +143,7 @@
         "Built handling for California CCPA deletion and do-not-sell requests.",
         "Built document Q&A over insurance records where every answer cites its source, and incomplete records go to a person so the system doesn’t guess.",
         "Built the infrastructure that runs many Claude Code agents unattended for Stoke, started from Slack and Linear.",
-        "Built a prompt-to-film pipeline that cut 80–200 hours of pre-production to about two."
+        "Built a prompt-to-film pipeline that generates movie from scripts"
       ]
     },
     {

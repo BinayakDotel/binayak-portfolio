@@ -5,13 +5,10 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { content } from "@/lib/content";
 import { ModeToggle } from "./ModeToggle";
-import { usePalette, useShortcutLabel } from "./Palette";
 
 export function Header() {
   const pathname = usePathname();
   const onHome = pathname === "/";
-  const { open } = usePalette();
-  const shortcut = useShortcutLabel();
   const [active, setActive] = useState<string | null>(null);
 
   // On the home page the nav follows the section in view.
@@ -56,10 +53,6 @@ export function Header() {
             ),
           )}
         </nav>
-        <button className="srch" type="button" aria-haspopup="dialog" onClick={open}>
-          <span>Search or ask</span>
-          <kbd>{shortcut}</kbd>
-        </button>
         <ModeToggle />
       </div>
     </header>

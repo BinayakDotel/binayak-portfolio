@@ -2,10 +2,12 @@
 
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
-import { content, matchQA, type Block } from "@/lib/content";
+import { MIN_SCORE, rank } from "@/lib/ask";
+import { ask, content, index, listedQA, suggestAfter, type Block, type QA } from "@/lib/content";
 import { currentMode, toggleMode } from "@/lib/mode";
 import { Blocks } from "./Blocks";
 import { RowIcon, Search, type IconName } from "./Icons";
+import { Related } from "./Related";
 
 interface PaletteApi {
   open: () => void;
@@ -14,22 +16,19 @@ interface PaletteApi {
 const Ctx = createContext<PaletteApi>({ open: () => {} });
 export const usePalette = () => useContext(Ctx);
 
-/** "Ctrl K" or "⌘ K", decided after the page loads so the server and browser HTML match. */
-export function useShortcutLabel() {
-  const [label, setLabel] = useState("Ctrl K");
-  useEffect(() => {
-    if (/Mac|iPhone|iPad/.test(navigator.platform || "")) setLabel("⌘ K");
-  }, []);
-  return label;
-}
-
 type Row = {
   group: "Go to" | "Ask" | "Settings";
   label: string;
   icon: IconName;
   run: () => void;
-  answer?: { title: string; blocks: Block[] };
+  answer?: Answer;
 };
+
+interface Answer {
+  title: string;
+  blocks: Block[];
+  related: QA[];
+}
 
 export function PaletteProvider({ children }: { children: React.ReactNode }) {
   const [isOpen, setOpen] = useState(false);
@@ -68,11 +67,11 @@ function CommandBar({ onClose }: { onClose: () => void }) {
   const onHome = pathname === "/";
   const [query, setQuery] = useState("");
   const [sel, setSel] = useState(0);
-  const [answer, setAnswer] = useState<{ title: string; blocks: Block[] } | null>(null);
+  const [answer, setAnswer] = useState<Answer | null>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const backRef = useRef<HTMLButtonElement>(null);
   const lastFocus = useRef<HTMLElement | null>(null);
-  const { person, sections, qa, noAnswer } = content;
+  const { person, sections, noAnswer } = content;
 
   // Freeze the page behind the bar, and give focus back when it closes.
   useEffect(() => {
@@ -124,27 +123,35 @@ function CommandBar({ onClose }: { onClose: () => void }) {
       },
     ];
     const goRows = go.filter((g) => !t || g.label.toLowerCase().includes(t));
-    const matched = t ? matchQA(t) : null;
-    const qs = qa.filter((q) => !t || q.q.toLowerCase().includes(t) || matched?.id === q.id);
-
     goRows.forEach((g) => out.push({ group: "Go to", ...g }));
+
+    // With nothing typed, show the listed questions. Otherwise show the best matches from every question.
+    const qs: QA[] = t
+      ? rank(t, index)
+          .filter((r) => r.raw >= MIN_SCORE)
+          .slice(0, 5)
+          .map((r) => r.qa)
+      : listedQA.slice(0, 5);
     qs.forEach((q) =>
       out.push({
         group: "Ask",
         label: q.q,
         icon: "ask",
         run: () => {},
-        answer: { title: q.q, blocks: q.blocks },
+        answer: { title: q.q, blocks: q.blocks, related: suggestAfter(q.id) },
       }),
     );
     if (t && !qs.length && !goRows.length && !modeWords) {
       const free = query.trim();
+      const { best, related } = ask(free);
       out.push({
         group: "Ask",
         label: `Ask “${free}”`,
         icon: "ask",
         run: () => {},
-        answer: { title: free, blocks: noAnswer },
+        answer: best
+          ? { title: best.q, blocks: best.blocks, related }
+          : { title: "I don’t have that one", blocks: noAnswer, related },
       });
     }
     const modeLabel = currentMode() === "dark" ? "Switch to light mode" : "Switch to dark mode";
@@ -160,7 +167,7 @@ function CommandBar({ onClose }: { onClose: () => void }) {
       });
     }
     return out;
-  }, [query, sections, qa, noAnswer, person, goTo, onClose]);
+  }, [query, sections, noAnswer, person, goTo, onClose]);
 
   const run = (n: number) => {
     const r = rows[n];
@@ -266,6 +273,10 @@ function CommandBar({ onClose }: { onClose: () => void }) {
             <div className="ans">
               <Blocks blocks={answer.blocks} />
             </div>
+            <Related
+              items={answer.related}
+              onPick={(q) => setAnswer({ title: q.q, blocks: q.blocks, related: suggestAfter(q.id) })}
+            />
           </div>
         )}
         <div className="pal-ft">

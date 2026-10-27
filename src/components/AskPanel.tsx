@@ -1,42 +1,42 @@
 "use client";
 
 import { useState } from "react";
-import { content, matchQA, type Block } from "@/lib/content";
+import { ask, content, listedQA, suggestAfter, type Block, type QA } from "@/lib/content";
 import { Blocks } from "./Blocks";
+import { Related } from "./Related";
 
 interface Shown {
   id: string | null;
   title: string;
   blocks: Block[];
+  related: QA[];
 }
 
 export function AskPanel() {
   const [shown, setShown] = useState<Shown | null>(null);
   const [text, setText] = useState("");
 
+  const showQuestion = (q: QA) =>
+    setShown({ id: q.id, title: q.q, blocks: q.blocks, related: suggestAfter(q.id) });
+
   const submit = (e: React.FormEvent) => {
     e.preventDefault();
     const v = text.trim();
     if (!v) return;
     setText("");
-    const m = matchQA(v);
+    const { best, related } = ask(v);
     setShown(
-      m
-        ? { id: m.id, title: m.q, blocks: m.blocks }
-        : { id: null, title: "I don’t have that one", blocks: content.noAnswer },
+      best
+        ? { id: best.id, title: best.q, blocks: best.blocks, related: related.length ? related : suggestAfter(best.id) }
+        : { id: null, title: "I don’t have that one", blocks: content.noAnswer, related },
     );
   };
 
   return (
     <div className="ask">
       <div className="aqs" role="group" aria-label="Questions">
-        {content.qa.map((q) => (
-          <button
-            key={q.id}
-            type="button"
-            aria-current={shown?.id === q.id}
-            onClick={() => setShown({ id: q.id, title: q.q, blocks: q.blocks })}
-          >
+        {listedQA.map((q) => (
+          <button key={q.id} type="button" aria-current={shown?.id === q.id} onClick={() => showQuestion(q)}>
             {q.q}
           </button>
         ))}
@@ -49,6 +49,7 @@ export function AskPanel() {
               <div className="ans">
                 <Blocks blocks={shown.blocks} />
               </div>
+              <Related items={shown.related} onPick={showQuestion} />
             </>
           ) : (
             <p className="hint">Choose a question on the left, or type your own below.</p>
@@ -67,7 +68,7 @@ export function AskPanel() {
             <button type="submit">Ask</button>
           </form>
           <small>
-            Tip: press <kbd>/</kbd> anywhere to search or ask.
+            Answers are written in advance from my CV and projects. Tip: press <kbd>/</kbd> anywhere to ask from any page.
           </small>
         </div>
       </div>

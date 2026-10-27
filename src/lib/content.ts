@@ -1,4 +1,5 @@
 import raw from "@/data/portfolio.json";
+import { answer, buildIndex, buildQA, relatedTo } from "./ask";
 
 export type Block =
   | { t: "p"; text: string }
@@ -8,6 +9,7 @@ export type Block =
   | { t: "projects"; ids: string[] }
   | { t: "experience"; id: string }
   | { t: "src"; text: string }
+  | { t: "link"; href: string; text: string }
   | { t: "mail" }
   | { t: "links" };
 
@@ -39,7 +41,13 @@ export interface SkillGroup {
 export interface QA {
   id: string;
   q: string;
+  /** Shown in the question list. Unlisted questions are only found by typing. */
+  listed?: boolean;
+  /** Built from the projects and skills, not written by hand. */
+  generated?: boolean;
   keywords: string[];
+  /** Whole phrases that count as a strong match, e.g. a project name. */
+  phrases?: string[];
   blocks: Block[];
 }
 
@@ -87,17 +95,13 @@ export const project = (id: string) =>
 
 export const job = (id: string) => content.experience.find((j) => j.id === id);
 
-/** Picks the question whose keywords appear most often in the text. */
-export function matchQA(text: string): QA | null {
-  const s = text.toLowerCase();
-  let best: QA | null = null;
-  let top = 0;
-  for (const q of content.qa) {
-    const score = q.keywords.filter((w) => s.includes(w)).length;
-    if (score > top) {
-      top = score;
-      best = q;
-    }
-  }
-  return best;
-}
+const all = buildQA(content);
+export const index = buildIndex(all, content);
+
+/** Every question that can be answered, written or generated. */
+export const allQA = all;
+/** The questions shown as buttons. */
+export const listedQA = all.filter((q) => q.listed);
+
+export const ask = (text: string) => answer(text, index);
+export const suggestAfter = (id: string) => relatedTo(id, index);

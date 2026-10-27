@@ -9,27 +9,57 @@
   },
   "site": {
     "title": "Binayak Dotel",
-    "description": "Binayak Dotel is a software engineer in Nepal who builds backends and AI agent systems that run in production.",
+    "description": "Binayak Dotel is a software engineer in Nepal who builds AI agent systems, backend services and games.",
     "url": "https://binayakdotel.github.io/binayak-portfolio/"
   },
   "hero": {
-    "headline": "I build backends and AI agent systems that run in production.",
-    "lede": "Four years working remotely for a US company, now on agents for an insurance client. I also publish small tools and games in my own time.",
+    "headline": "I build software, from AI agents to games.",
+    "lede": "Software engineer in Nepal with four years of remote work for a US company. I build AI agent systems and backend services, and I previously shipped Unity mobile games. In my own time I still make games and small tools.",
     "facts": [
-      { "label": "Now", "value": "Senior software engineer at WhiteHat Engineering" },
-      { "label": "Based in", "value": "Bhaktapur, Nepal (UTC+5:45)" },
-      { "label": "Open to", "value": "Backend, agent and game-tools roles", "open": true }
+      {
+        "label": "Now",
+        "value": "Senior software engineer at WhiteHat Engineering"
+      },
+      {
+        "label": "Based in",
+        "value": "Bhaktapur, Nepal (UTC+5:45)"
+      },
+      {
+        "label": "Open to",
+        "value": "AI agent, backend and game development roles",
+        "open": true
+      }
     ]
   },
   "sections": [
-    { "id": "work", "label": "Work", "note": "Four projects I built and kept" },
-    { "id": "experience", "label": "Experience", "note": "Roles and education" },
-    { "id": "skills", "label": "Skills", "note": "What I use, and where" },
-    { "id": "ask", "label": "Ask me", "note": "Ready-written answers from my CV and projects. Not a live AI." },
-    { "id": "contact", "label": "Contact", "note": "" }
+    {
+      "id": "work",
+      "label": "Work",
+      "note": "Four projects I built and kept"
+    },
+    {
+      "id": "experience",
+      "label": "Experience",
+      "note": "Roles and education"
+    },
+    {
+      "id": "skills",
+      "label": "Skills",
+      "note": "What I use, and where"
+    },
+    {
+      "id": "ask",
+      "label": "Ask me",
+      "note": "Ready-written answers from my CV and projects. Not a live AI."
+    },
+    {
+      "id": "contact",
+      "label": "Contact",
+      "note": ""
+    }
   ],
   "contact": {
-    "intro": "The fastest way to reach me is email. I reply within a day."
+    "intro": "Email is the fastest way to reach me. I reply within a day."
   },
   "projects": [
     {
@@ -39,12 +69,17 @@
       "year": "2026",
       "desc": "Helps a reviewer understand a pull request before reading the diff.",
       "did": [
-        "A typed change model with line-level citations, so each claim points at code.",
-        "A deterministic diagram renderer for the shape of the change.",
-        "An automated grader for answers about the change.",
-        "Built in two days with an agent-driven ticket workflow: 87 commits, test-first, stacked PRs."
+        "A reviewer opening a large pull request has to work out what changed and why. I built a typed change model where every claim cites the exact lines of code, so it can be checked instead of trusted.",
+        "Wrote a deterministic diagram renderer, so the same change always produces the same picture of its shape.",
+        "Added an automated grader that scores the answers about a change, so quality can be measured when prompts or models change.",
+        "Worked test-first through an agent-driven ticket workflow, with stacked pull requests."
       ],
-      "stack": ["TypeScript", "Next.js", "Convex", "Claude"],
+      "stack": [
+        "TypeScript",
+        "Next.js",
+        "Convex",
+        "Claude"
+      ],
       "repo": "https://github.com/BinayakDotel/dekko-monorepo"
     },
     {
@@ -54,10 +89,13 @@
       "year": "2026",
       "desc": "Agent Skills (SKILL.md files) for Claude and other AI agents, published in one place.",
       "did": [
-        "Reusable instructions packaged as SKILL.md files.",
-        "Written for Claude and usable by other agents."
+        "Packaged reusable instructions as SKILL.md files, so an agent can load them when a task needs them.",
+        "Wrote them for Claude and kept them usable by other agents."
       ],
-      "stack": ["Python", "SKILL.md"],
+      "stack": [
+        "Python",
+        "SKILL.md"
+      ],
       "repo": "https://github.com/BinayakDotel/skills-marketplace"
     },
     {
@@ -67,10 +105,13 @@
       "year": "2026",
       "desc": "Turns a Kathmandu kirana shop’s paper bills into a searchable digital bill book.",
       "did": [
-        "Works on a phone as a progressive web app (PWA).",
-        "Replaces the drawer of paper bills with something you can search."
+        "Shop owners keep paper bills in a drawer and can’t search them. I built a phone app that turns them into a searchable bill book.",
+        "Built it as a progressive web app (PWA), so it installs and works on a phone without an app store."
       ],
-      "stack": ["TypeScript", "PWA"],
+      "stack": [
+        "TypeScript",
+        "PWA"
+      ],
       "repo": "https://github.com/BinayakDotel/mero-pasal"
     },
     {
@@ -80,10 +121,13 @@
       "year": "2026",
       "desc": "A colour-matching endless runner in Godot 4.",
       "did": [
-        "Used CrazyGames player metrics (playtime, return rate) to find where players left.",
-        "Shipped update 1.0.1: new players start on the road, calmer screen shake, a free shield and a gentler first minute."
+        "Used CrazyGames player metrics (playtime and return rate) to find where players dropped out in the first minute.",
+        "Shipped update 1.0.1 to fix it: new players start on the road, screen shake is calmer, and they get a free shield."
       ],
-      "stack": ["Godot 4", "GDScript"],
+      "stack": [
+        "Godot 4",
+        "GDScript"
+      ],
       "repo": "https://github.com/BinayakDotel/chroma-rush"
     }
   ],
@@ -95,11 +139,11 @@
       "org": "WhiteHat Engineering",
       "summary": "A US-based company. I worked remotely from Nepal on client systems and internal tools.",
       "bullets": [
-        "A call-review service for an AI voice agent that screens insurance leads.",
-        "California CCPA handling for deletion and do-not-sell requests.",
-        "Document Q&A where every answer cites its source, and incomplete records go to a person.",
-        "Infrastructure that runs many Claude Code agents unattended for Stoke.",
-        "A prompt-to-film pipeline that cut 80–200 hours of pre-production to about two."
+        "Built a call-review service for an AI voice agent that screens insurance leads.",
+        "Built handling for California CCPA deletion and do-not-sell requests.",
+        "Built document Q&A over insurance records where every answer cites its source, and incomplete records go to a person so the system doesn’t guess.",
+        "Built the infrastructure that runs many Claude Code agents unattended for Stoke, started from Slack and Linear.",
+        "Built a prompt-to-film pipeline that cut 80–200 hours of pre-production to about two."
       ]
     },
     {
@@ -123,100 +167,345 @@
     {
       "group": "Build backends",
       "items": [
-        { "name": "Python", "note": "Skills Marketplace, FastAPI services, and the SRGAN project." },
-        { "name": "FastAPI", "note": "The insurance document assistant and client services." },
-        { "name": "Node.js and Bun", "note": "Agent infrastructure for Stoke." },
-        { "name": "REST and webhooks", "note": "Slack, Linear and GitHub integrations." },
-        { "name": "PostgreSQL", "note": "Data layers for client systems." },
-        { "name": "Docker and CI/CD", "note": "Deploys, and regression runs on every change." }
+        {
+          "name": "Python",
+          "note": "Skills Marketplace, FastAPI services, and the SRGAN project."
+        },
+        {
+          "name": "FastAPI",
+          "note": "The insurance document assistant and client services."
+        },
+        {
+          "name": "Node.js and Bun",
+          "note": "Agent infrastructure for Stoke."
+        },
+        {
+          "name": "REST and webhooks",
+          "note": "Slack, Linear and GitHub integrations."
+        },
+        {
+          "name": "PostgreSQL",
+          "note": "Data layers for client systems."
+        },
+        {
+          "name": "Docker and CI/CD",
+          "note": "Deploys, and regression runs on every change."
+        }
       ]
     },
     {
       "group": "Agents and AI",
       "items": [
-        { "name": "Anthropic and OpenAI APIs", "note": "Call review, agent infrastructure and the prompt-to-film pipeline." },
-        { "name": "RAG with citations", "note": "Policy and claims Q&A where every answer shows its source." },
-        { "name": "LLM evals", "note": "Labelled test sets, regression runs and decision logs." },
-        { "name": "MCP servers", "note": "Tools for unattended agents at Stoke." },
-        { "name": "Claude Code", "note": "Daily use, and headless agents running from Slack and Linear." }
+        {
+          "name": "Anthropic and OpenAI APIs",
+          "note": "Call review, agent infrastructure and the prompt-to-film pipeline."
+        },
+        {
+          "name": "RAG with citations",
+          "note": "Policy and claims Q&A where every answer shows its source."
+        },
+        {
+          "name": "LLM evals",
+          "note": "Labelled test sets, regression runs and decision logs."
+        },
+        {
+          "name": "MCP servers",
+          "note": "Tools for unattended agents at Stoke."
+        },
+        {
+          "name": "Claude Code",
+          "note": "Daily use, and headless agents running from Slack and Linear."
+        }
       ]
     },
     {
       "group": "Games and front end",
       "items": [
-        { "name": "Unity and C#", "note": "Published mobile games at Aastav." },
-        { "name": "Godot 4 and GDScript", "note": "Chroma Rush." },
-        { "name": "React and Next.js", "note": "Dekko and live dashboards." },
-        { "name": "Convex", "note": "Dekko and the Stoke live dashboard." },
-        { "name": "Firebase", "note": "Backends and in-app purchases for mobile games." }
+        {
+          "name": "Unity and C#",
+          "note": "Published mobile games at Aastav."
+        },
+        {
+          "name": "Godot 4 and GDScript",
+          "note": "Chroma Rush, my endless runner on CrazyGames."
+        },
+        {
+          "name": "React and Next.js",
+          "note": "Dekko and live dashboards."
+        },
+        {
+          "name": "Convex",
+          "note": "Dekko and the Stoke live dashboard."
+        },
+        {
+          "name": "Firebase",
+          "note": "Backends and in-app purchases for mobile games."
+        }
       ]
     }
   ],
   "qa": [
     {
-      "id": "build",
-      "q": "What do you build?",
-      "keywords": ["build", "make", "skills", "stack", "tech", "languages", "expertise", "specialize"],
+      "id": "intro",
+      "q": "Who are you?",
+      "listed": true,
+      "keywords": [
+        "who",
+        "intro",
+        "introduce",
+        "yourself",
+        "name",
+        "summary",
+        "overview"
+      ],
       "blocks": [
-        { "t": "p", "text": "Backends, AI agents and games. At work that means services and agent systems for US clients. Outside work it means small tools and games I publish." },
-        { "t": "tags", "items": ["Python", "FastAPI", "Node.js and Bun", "LLM evals", "Claude Code", "Unity", "Godot"] },
-        { "t": "src", "text": "From my CV and GitHub." }
-      ]
-    },
-    {
-      "id": "proj",
-      "q": "Show me your projects",
-      "keywords": ["project", "projects", "github", "portfolio", "side", "open", "source", "repo"],
-      "blocks": [
-        { "t": "p", "text": "Four that I built and kept. Each one links to its code." },
-        { "t": "projects", "ids": ["dekko", "skills", "pasal", "chroma"] },
-        { "t": "src", "text": "Dekko: 87 commits in two days, test-first. Chroma Rush: update 1.0.1 came from CrazyGames player metrics." }
+        {
+          "t": "p",
+          "text": "I’m Binayak Dotel, a software engineer in Bhaktapur, Nepal. For the last four years I’ve worked remotely for WhiteHat Engineering, a US company, building AI agent systems and backend services. Before that I built published Unity mobile games. In my own time I make games and small tools."
+        },
+        {
+          "t": "tags",
+          "items": [
+            "AI agents",
+            "Backends",
+            "Games"
+          ]
+        },
+        {
+          "t": "src",
+          "text": "From my CV."
+        }
       ]
     },
     {
       "id": "wh",
       "q": "What did you do at WhiteHat?",
-      "keywords": ["whitehat", "work", "job", "experience", "company", "career", "insurance", "stoke", "ccpa"],
+      "listed": true,
+      "keywords": [
+        "whitehat",
+        "job",
+        "company",
+        "career",
+        "employer",
+        "stoke",
+        "senior"
+      ],
       "blocks": [
-        { "t": "h", "text": "WhiteHat Engineering, 2022–2026" },
-        { "t": "p", "text": "A US-based company. I worked remotely from Nepal on client systems and internal tools." },
-        { "t": "experience", "id": "wh" },
-        { "t": "src", "text": "From my CV." }
+        {
+          "t": "h",
+          "text": "WhiteHat Engineering, 2022–2026"
+        },
+        {
+          "t": "p",
+          "text": "A US-based company. I worked remotely from Nepal on client systems and internal tools."
+        },
+        {
+          "t": "experience",
+          "id": "wh"
+        },
+        {
+          "t": "src",
+          "text": "From my CV."
+        }
       ]
     },
     {
       "id": "agents",
-      "q": "Can you work on AI agents?",
-      "keywords": ["agent", "agents", "ai", "llm", "rag", "claude", "mcp", "eval", "evals"],
+      "q": "What AI agent work have you done?",
+      "listed": true,
+      "keywords": [
+        "agent",
+        "ai",
+        "llm",
+        "rag",
+        "claude",
+        "mcp",
+        "prompt",
+        "anthropic",
+        "openai",
+        "gpt",
+        "model"
+      ],
       "blocks": [
-        { "t": "p", "text": "Yes, it’s most of my current work." },
+        {
+          "t": "p",
+          "text": "It’s most of my current work."
+        },
         {
           "t": "ul",
           "items": [
-            "Infrastructure that runs many Claude Code agents unattended, from Slack and Linear.",
-            "Document Q&A with citations, where incomplete records go to a person.",
-            "A call-review service for an AI voice agent.",
-            "Labelled test sets and regression runs for LLM evals."
+            "Built infrastructure that runs many Claude Code agents unattended, started from Slack and Linear.",
+            "Built document Q&A over insurance records. Every answer cites its source, and incomplete records go to a person instead of being guessed.",
+            "Built a call-review service for an AI voice agent that screens insurance leads.",
+            "Built a prompt-to-film pipeline that cut 80–200 hours of pre-production to about two.",
+            "Set up labelled test sets and regression runs, so changes to prompts and models can be measured."
           ]
         },
-        { "t": "tags", "items": ["Anthropic and OpenAI APIs", "RAG with citations", "LLM evals", "MCP servers", "Claude Code"] }
+        {
+          "t": "tags",
+          "items": [
+            "Anthropic and OpenAI APIs",
+            "RAG with citations",
+            "LLM evals",
+            "MCP servers",
+            "Claude Code"
+          ]
+        }
       ]
     },
     {
       "id": "games",
       "q": "Do you make games?",
-      "keywords": ["game", "games", "unity", "godot", "crazygames", "play"],
+      "listed": true,
+      "keywords": [
+        "game",
+        "games",
+        "unity",
+        "godot",
+        "crazygames",
+        "aastav",
+        "mobile",
+        "play",
+        "gamedev"
+      ],
       "blocks": [
-        { "t": "p", "text": "Yes. Two years as a freelance Unity developer for Aastav: several published mobile games with custom UI, a Firebase backend, in-app purchases and ads. Now Chroma Rush, a Godot 4 runner on CrazyGames." },
-        { "t": "projects", "ids": ["chroma"] }
+        {
+          "t": "p",
+          "text": "Yes. For two years I was a freelance Unity developer at Aastav, shipping and maintaining several published mobile games with custom UI, a Firebase backend, in-app purchases and ad monetization. Now I’m making Chroma Rush, a Godot 4 endless runner on CrazyGames, and I use its player metrics to decide what to change."
+        },
+        {
+          "t": "projects",
+          "ids": [
+            "chroma"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "proj",
+      "q": "Show me your projects",
+      "listed": true,
+      "keywords": [
+        "project",
+        "projects",
+        "github",
+        "portfolio",
+        "side",
+        "open",
+        "source",
+        "repo",
+        "repository",
+        "built",
+        "made"
+      ],
+      "blocks": [
+        {
+          "t": "p",
+          "text": "Four that I built and kept. Each one links to its code."
+        },
+        {
+          "t": "projects",
+          "ids": [
+            "dekko",
+            "skills",
+            "pasal",
+            "chroma"
+          ]
+        },
+        {
+          "t": "src",
+          "text": "Chroma Rush update 1.0.1 came from CrazyGames player metrics."
+        }
+      ]
+    },
+    {
+      "id": "stack",
+      "q": "What is your tech stack?",
+      "listed": true,
+      "keywords": [
+        "stack",
+        "tech",
+        "technology",
+        "skill",
+        "skills",
+        "language",
+        "framework",
+        "tool",
+        "expertise",
+        "python",
+        "node",
+        "typescript"
+      ],
+      "blocks": [
+        {
+          "t": "p",
+          "text": "Python and Node.js for backends, Anthropic and OpenAI APIs for AI work, Unity and Godot for games, and React with Next.js on the front end."
+        },
+        {
+          "t": "tags",
+          "items": [
+            "Python",
+            "FastAPI",
+            "Node.js and Bun",
+            "PostgreSQL",
+            "LLM evals",
+            "Claude Code",
+            "Unity",
+            "Godot",
+            "React and Next.js"
+          ]
+        },
+        {
+          "t": "src",
+          "text": "The Skills section says where I used each one."
+        }
+      ]
+    },
+    {
+      "id": "remote",
+      "q": "Have you worked remotely?",
+      "listed": true,
+      "keywords": [
+        "remote",
+        "remotely",
+        "async",
+        "distributed",
+        "wfh",
+        "team",
+        "timezone",
+        "overlap"
+      ],
+      "blocks": [
+        {
+          "t": "p",
+          "text": "Yes. Since 2022 I’ve worked remotely from Nepal (UTC+5:45) for WhiteHat Engineering, a US-based company, on client systems and internal tools. That includes integrations with Slack, Linear and GitHub."
+        }
       ]
     },
     {
       "id": "bg",
       "q": "What’s your background?",
-      "keywords": ["background", "education", "study", "college", "degree", "school", "gpa", "cgpa", "hackathon", "srgan"],
+      "listed": true,
+      "keywords": [
+        "background",
+        "education",
+        "study",
+        "college",
+        "degree",
+        "school",
+        "gpa",
+        "cgpa",
+        "hackathon",
+        "srgan",
+        "ncit",
+        "university",
+        "graduate"
+      ],
       "blocks": [
-        { "t": "p", "text": "B.E. in Software Engineering from Nepal College of Information Technology, 2017–2022. CGPA 3.9 / 4.0, Faculty Topper." },
+        {
+          "t": "p",
+          "text": "B.E. in Software Engineering from Nepal College of Information Technology, 2017–2022. CGPA 3.9 / 4.0, Faculty Topper."
+        },
         {
           "t": "ul",
           "items": [
@@ -224,22 +513,236 @@
             "Final-year project: SRGAN image super-resolution."
           ]
         },
-        { "t": "src", "text": "Then freelance Unity work, then WhiteHat." }
+        {
+          "t": "src",
+          "text": "Then freelance Unity work, then WhiteHat."
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "q": "What are you looking for?",
+      "listed": true,
+      "keywords": [
+        "looking",
+        "seek",
+        "seeking",
+        "next",
+        "want",
+        "role",
+        "position",
+        "open",
+        "interested",
+        "opportunity",
+        "join"
+      ],
+      "blocks": [
+        {
+          "t": "p",
+          "text": "I’m open to AI agent, backend and game development roles, remote or in the Kathmandu Valley."
+        },
+        {
+          "t": "mail"
+        }
       ]
     },
     {
       "id": "hi",
       "q": "How do I contact you?",
-      "keywords": ["contact", "email", "hire", "hiring", "reach", "talk", "available", "availability", "open"],
+      "listed": true,
+      "keywords": [
+        "contact",
+        "email",
+        "reach",
+        "talk",
+        "message",
+        "hire",
+        "hiring",
+        "available",
+        "availability",
+        "meet",
+        "interview",
+        "linkedin",
+        "github",
+        "freelance",
+        "contract",
+        "consult"
+      ],
       "blocks": [
-        { "t": "p", "text": "I’m open to backend, agent and game-tools roles, remote or in the Kathmandu Valley. I reply within a day, Nepal time (UTC+5:45)." },
-        { "t": "mail" },
-        { "t": "links" }
+        {
+          "t": "p",
+          "text": "Email is the fastest way. I reply within a day, Nepal time (UTC+5:45)."
+        },
+        {
+          "t": "mail"
+        },
+        {
+          "t": "links"
+        }
+      ]
+    },
+    {
+      "id": "location",
+      "q": "Where are you based?",
+      "keywords": [
+        "location",
+        "where",
+        "live",
+        "based",
+        "nepal",
+        "kathmandu",
+        "bhaktapur",
+        "timezone",
+        "zone",
+        "time",
+        "city",
+        "country"
+      ],
+      "blocks": [
+        {
+          "t": "p",
+          "text": "I’m in Bhaktapur, in the Kathmandu Valley, Nepal. My time zone is UTC+5:45."
+        }
+      ]
+    },
+    {
+      "id": "resume",
+      "q": "Can I see your resume?",
+      "keywords": [
+        "resume",
+        "cv",
+        "pdf",
+        "download"
+      ],
+      "blocks": [
+        {
+          "t": "p",
+          "text": "Yes, it’s a PDF."
+        },
+        {
+          "t": "links"
+        }
+      ]
+    },
+    {
+      "id": "terms",
+      "q": "Can we talk about pay, notice period or start date?",
+      "keywords": [
+        "salary",
+        "pay",
+        "compensation",
+        "rate",
+        "notice",
+        "period",
+        "terms",
+        "start",
+        "negotiate",
+        "budget"
+      ],
+      "blocks": [
+        {
+          "t": "p",
+          "text": "Those are best discussed directly. Email me about the role and I’ll reply within a day."
+        },
+        {
+          "t": "mail"
+        }
+      ]
+    },
+    {
+      "id": "evals",
+      "q": "How do you test and evaluate AI work?",
+      "keywords": [
+        "eval",
+        "test",
+        "testing",
+        "quality",
+        "regression",
+        "grader",
+        "measure",
+        "benchmark",
+        "accuracy",
+        "llm",
+        "evaluate"
+      ],
+      "blocks": [
+        {
+          "t": "ul",
+          "items": [
+            "Labelled test sets and regression runs for LLM evals, with decision logs.",
+            "Regression runs on every change in CI/CD.",
+            "Dekko has an automated grader that scores its answers about a change, and it was built test-first."
+          ]
+        },
+        {
+          "t": "tags",
+          "items": [
+            "LLM evals",
+            "Regression runs",
+            "CI/CD"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "insurance",
+      "q": "Have you worked with insurance or privacy rules?",
+      "keywords": [
+        "insurance",
+        "ccpa",
+        "privacy",
+        "compliance",
+        "regulated",
+        "claims",
+        "policy",
+        "leads",
+        "voice"
+      ],
+      "blocks": [
+        {
+          "t": "ul",
+          "items": [
+            "Built a call-review service for an AI voice agent that screens insurance leads.",
+            "Built handling for California CCPA deletion and do-not-sell requests.",
+            "Built policy and claims Q&A where every answer shows its source."
+          ]
+        },
+        {
+          "t": "src",
+          "text": "From my work at WhiteHat Engineering."
+        }
+      ]
+    },
+    {
+      "id": "claudecode",
+      "q": "How do you use Claude Code?",
+      "keywords": [
+        "claude",
+        "code",
+        "cli",
+        "headless",
+        "linear",
+        "slack"
+      ],
+      "blocks": [
+        {
+          "t": "ul",
+          "items": [
+            "Every day, as part of how I build.",
+            "I run headless agents from Slack and Linear.",
+            "Dekko was built through an agent-driven ticket workflow: test-first, with stacked pull requests."
+          ]
+        }
       ]
     }
   ],
   "noAnswer": [
-    { "t": "p", "text": "I don’t have a ready answer for that one. Try a question from the list, or email me and I’ll reply." },
-    { "t": "mail" }
+    {
+      "t": "p",
+      "text": "I only have ready-written answers, and none of them covers that. Try one of these, or email me and I’ll reply."
+    },
+    {
+      "t": "mail"
+    }
   ]
 }

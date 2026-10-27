@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { asset, content, section, type SectionInfo } from "@/lib/content";
 import { AskPanel } from "./AskPanel";
+import { CopyButton } from "./CopyButton";
 import { ProjectArt } from "./ProjectArt";
 
 /** One block of the page: a label column on the left, the content on the right. */
@@ -116,17 +117,29 @@ export function SkillsGrid() {
 
 export function ContactBlock() {
   const { person, contact } = content;
+  const short = (url: string) => url.replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, "");
   return (
     <div className="contact">
       <p>{contact.intro}</p>
-      <a className="mail" href={`mailto:${person.email}`}>
-        {person.email}
-      </a>
-      <div className="links">
-        <a href={person.github}>GitHub</a>
-        <a href={person.linkedin}>LinkedIn</a>
-        <a href={asset(person.resume)}>Resume (PDF)</a>
-      </div>
+      <ul className="clist">
+        <li>
+          <span className="k">Email</span>
+          <a href={`mailto:${person.email}`}>{person.email}</a>
+          <CopyButton text={person.email} label="email address" />
+        </li>
+        <li>
+          <span className="k">LinkedIn</span>
+          <a href={person.linkedin}>{short(person.linkedin)}</a>
+        </li>
+        <li>
+          <span className="k">GitHub</span>
+          <a href={person.github}>{short(person.github)}</a>
+        </li>
+        <li>
+          <span className="k">Resume</span>
+          <a href={asset(person.resume)}>Download as PDF</a>
+        </li>
+      </ul>
     </div>
   );
 }

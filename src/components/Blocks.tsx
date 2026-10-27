@@ -61,6 +61,14 @@ export function Blocks({ blocks }: { blocks: Block[] }) {
                 })}
               </div>
             );
+          case "link":
+            return (
+              <p key={i}>
+                <a className="lnk" href={b.href}>
+                  {b.text}
+                </a>
+              </p>
+            );
           case "mail":
             return (
               <p key={i}>

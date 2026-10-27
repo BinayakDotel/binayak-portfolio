@@ -1,215 +1,245 @@
 {
-  "personal": {
+  "person": {
     "name": "Binayak Dotel",
-    "title": "Software Engineer",
+    "email": "binayakdotel01@gmail.com",
     "location": "Bhaktapur, Nepal",
-    "email": "binayakdotel01.bd@gmail.com",
-    "social": {
-      "linkedin": "https://www.linkedin.com/in/binayak-dotel-b22728146/",
-      "github": "https://github.com/BinayakDotel"
-    }
+    "github": "https://github.com/BinayakDotel",
+    "linkedin": "https://www.linkedin.com/in/binayak-dotel-b22728146/",
+    "resume": "/Binayak%20Dotel%20Resume.pdf"
   },
-  "navigation": [
-    {
-      "label": "Home",
-      "path": "/"
-    },
-    {
-      "label": "Projects",
-      "path": "/projects"
-    },
-    {
-      "label": "Work History",
-      "path": "/work-history"
-    },
-    {
-      "label": "Work In Progress",
-      "path": "/work-in-progress"
-    },
-    {
-      "label": "Education",
-      "path": "/education"
-    },
-    {
-      "label": "Resume",
-      "path": "/resume"
-    },
-    {
-      "label": "About Me",
-      "path": "/about"
-    }
-  ],
-  "projects": [
-    {
-      "id": 4,
-      "title": "Space Cluster - Merge & Drop",
-      "description": "A strategic space-themed mobile game where players merge planets and create stars to build their own galaxy. As a galactic architect, players combine smaller celestial bodies into more powerful ones, unlocking new cosmic wonders. The game features challenging gameplay mechanics with balanced spawn rates, requiring strategic thinking to progress. Built with Unity, it offers an engaging experience with vibrant visuals and mesmerizing effects, making it both easy to play yet challenging to master.",
-      "technologies": ["Unity", "C#", "Mobile Game Development", "Game Design", "UI/UX", "Game Physics"],
-      "image": "/projects/project4.jpg",
-      "github": "https://gitlab.com/binayak01.bd/space-cluster",
-      "live": "https://pixelyardstudios.itch.io/space-cluster-merge-drop"
-    },
-    {
-      "id": 1,
-      "title": "RTMotionCapture-Animation",
-      "description": "A real-time motion capture system that revolutionizes 3D animation by using computer vision instead of expensive motion capture suits. The system captures human movement through a simple camera, processes it using pose estimation technology to detect key body points, and generates 3D animations in real-time. Built with a client-server architecture, it uses Python for pose estimation and Unity for 3D rendering, communicating through JSON for seamless data transfer. This innovative solution makes professional-quality motion capture accessible without the need for specialized equipment or motion tracking suits.",
-      "technologies": ["Unity", "Python", "Computer Vision", "Pose Estimation", "JSON", "Client-Server Architecture"],
-      "image": "/projects/project1.jpg",
-      "github": "https://github.com/BinayakDotel/RTMotionCapture-Animation",
-      "live": null
-    },
-    {
-      "id": 2,
-      "title": "G_Engine-Opengl",
-      "description": "A learning project focused on understanding the fundamentals of graphics programming and game engine architecture using OpenGL. This engine implements core 3D graphics concepts including vertex and index buffers, normal mapping, camera systems with both perspective and orthographic projections, and basic rendering pipeline. Built as a hands-on exploration of computer graphics principles, this project serves as a practical reference for understanding how modern game engines handle 3D rendering at a lower level.",
-      "technologies": ["OpenGL", "C++", "Computer Graphics", "3D Mathematics", "Game Engine Architecture"],
-      "image": "/projects/project2.jpg",
-      "github": "https://github.com/BinayakDotel/G_Engine-Opengl",
-      "live": null
-    },
-    {
-      "id": 3,
-      "title": "SRGANProgram",
-      "description": "A college project implementing Super-Resolution using Generative Adversarial Networks (GANs) to enhance image quality. The system takes low-resolution images as input and generates high-resolution versions while preserving and enhancing details. The project involved training a custom GAN model with a generator network that creates high-quality images and a discriminator network that helps improve the realism of the generated images. This implementation demonstrates practical applications of deep learning in image processing and enhancement.",
-      "technologies": ["Python", "TensorFlow", "GAN", "Deep Learning", "Image Processing", "Computer Vision"],
-      "image": "/projects/project3.jpg",
-      "github": "https://github.com/BinayakDotel/SRGANProgram",
-      "live": null
-    }
-  ],
-  "workInProgress": [
-    {
-      "id": 1,
-      "title": "Voice-Controlled Action System (Prototype for Interactive NPC Dialogue)",
-      "description": "Developing a real-time voice-to-action framework where spoken player commands are transcribed, mapped to structured actions, and executed on a character within the game world. The current implementation supports core navigation commands to move the character in 4 differnt directions, enabling natural language voice control of in-game entities. The pipeline integrates speech-to-text transcription with an intent recognition agent that classifies commands into actionable game events. This project serves as the foundation for a broader research direction: extending the system into a fully interactive NPC dialogue model where players can use unconstrained language to ask questions, request directions, or engage in narrative-driven conversations with non-player characters. By combining speech processing, real-time action mapping, and dialogue management, this work-in-progress bridges the gap between traditional command-based input and context-aware, AI-driven game interaction.",
-      "technologies": ["Godot Engine", "GDScript", "Speech-to-Text", "Intent Recognition", "Real-Time Interaction", "AI Agents"],
-      "image": "/projects/project5.jpg",
-      "github": "",
-      "live": null
-    }
-  ],
-  "about": {
-    "summary": "A passionate software engineer with expertise in game development, computer vision, and AI technologies. Currently working as a Senior Software Engineer at Earth9 Inc., where I contribute to various projects using Unity and Unreal Engine. I have a strong interest in computer vision and motion capture technologies, having developed a real-time motion capture system. I also work extensively with AI models and tools like ComfyUI for setting up and customizing various models including WAN, LoRAs, and SDXL.",
-    "skills": [
-      {
-        "category": "Game Development",
-        "items": [
-          "Unity",
-          "Unreal Engine",
-          "C#",
-          "C++",
-          "Procedural Generation",
-          "Game Physics",
-          "3D Graphics"
-        ]
-      },
-      {
-        "category": "Computer Vision & AI",
-        "items": [
-          "Python",
-          "OpenCV",
-          "TensorFlow",
-          "Motion Capture",
-          "Real-time Processing",
-          "Computer Vision Algorithms"
-        ]
-      },
-      {
-        "category": "AI & Machine Learning",
-        "items": [
-          "ComfyUI",
-          "Stable Diffusion",
-          "SDXL",
-          "LoRAs",
-          "WAN Models",
-          "Model Fine-tuning",
-          "AI Workflow Automation"
-        ]
-      },
-      {
-        "category": "Web Development",
-        "items": [
-          "React",
-          "Next.js",
-          "TypeScript",
-          "Node.js",
-          "Tailwind CSS",
-          "REST APIs"
-        ]
-      },
-      {
-        "category": "Tools & Technologies",
-        "items": [
-          "Git",
-          "Docker",
-          "VS Code",
-          "Jira",
-          "Agile Methodologies",
-          "CI/CD"
-        ]
-      }
-    ],
-    "experience": [
-      {
-        "title": "Senior Software Engineer",
-        "company": "Earth9 Inc.",
-        "period": "2022-Present",
-        "description": "Led development of multiple advanced systems and tools across Unity, Unreal Engine, and Blender.",
-        "projects": [
-          {
-            "name": "Procedural World Generation System (Unity)",
-            "achievements": [
-              "Developed a sophisticated system that generates detailed 3D terrain and building layouts from real-world coordinates",
-              "Integrated OpenStreetMap data for accurate building placement and urban planning",
-              "Engineered a custom 2D-to-3D building construction pipeline with dynamic architectural features",
-              "Implemented complex systems for wall generation, window/door placement, and material management"
-            ]
-          },
-          {
-            "name": "Interactive Level Editor (Unreal Engine)",
-            "achievements": [
-              "Architected a comprehensive level editor tool enabling non-technical users to create complex game environments",
-              "Implemented real-time level construction with interactive elements, NPCs, and environmental storytelling",
-              "Developed systems for placing and configuring game elements including lasers, walls, blocks, and hidden treasures",
-              "Created a dynamic data processing pipeline for real-time level generation in Unreal Engine"
-            ]
-          },
-          {
-            "name": "Automated Movie Production Pipeline (Blender)",
-            "achievements": [
-              "Developed an automated content generation system based on script analysis",
-              "Integrated motion capture and lip-sync systems for character animation",
-              "Engineered a procedural shot generation system for efficient video production",
-              "Created a streamlined pipeline for rendering and post-processing"
-            ]
-          }
-        ]
-      },
-      {
-        "title": "Unity Game Developer",
-        "company": "Aastav",
-        "period": "2020 - 2022",
-        "description": "Full-stack mobile game development with focus on user engagement and monetization.",
-        "achievements": [
-          "Developed and maintained multiple mobile games with custom UI/UX frameworks",
-          "Implemented real-time leaderboard systems and core gameplay mechanics",
-          "Integrated Firebase for backend services and in-app purchases",
-          "Engineered Unity Ads integration and reward systems for optimal monetization",
-          "Collaborated with cross-functional teams to deliver polished, market-ready mobile games"
-        ]
-      }
-    ],
-    "education": [
-      {
-        "degree": "Bachelor of Engineering in Software Engineering",
-        "institution": "Nepal College of Information Technology",
-        "period": "2017 - 2022",
-        "description": "Relevant coursework and achievements"
-      }
+  "site": {
+    "title": "Binayak Dotel",
+    "description": "Binayak Dotel is a software engineer in Nepal who builds backends and AI agent systems that run in production.",
+    "url": "https://binayakdotel.github.io/binayak-portfolio/"
+  },
+  "hero": {
+    "headline": "I build backends and AI agent systems that run in production.",
+    "lede": "Four years working remotely for a US company, now on agents for an insurance client. I also publish small tools and games in my own time.",
+    "facts": [
+      { "label": "Now", "value": "Senior software engineer at WhiteHat Engineering" },
+      { "label": "Based in", "value": "Bhaktapur, Nepal (UTC+5:45)" },
+      { "label": "Open to", "value": "Backend, agent and game-tools roles", "open": true }
     ]
   },
-  "cv": {
-    "file": "/binayak-portfolio/Binayak Dotel Resume.pdf",
-    "lastUpdated": "2025-05-21"
-  }
-} 
+  "sections": [
+    { "id": "work", "label": "Work", "note": "Four projects I built and kept" },
+    { "id": "experience", "label": "Experience", "note": "Roles and education" },
+    { "id": "skills", "label": "Skills", "note": "What I use, and where" },
+    { "id": "ask", "label": "Ask me", "note": "Ready-written answers from my CV and projects. Not a live AI." },
+    { "id": "contact", "label": "Contact", "note": "" }
+  ],
+  "contact": {
+    "intro": "The fastest way to reach me is email. I reply within a day."
+  },
+  "projects": [
+    {
+      "id": "dekko",
+      "name": "Dekko",
+      "kind": "Open source",
+      "year": "2026",
+      "desc": "Helps a reviewer understand a pull request before reading the diff.",
+      "did": [
+        "A typed change model with line-level citations, so each claim points at code.",
+        "A deterministic diagram renderer for the shape of the change.",
+        "An automated grader for answers about the change.",
+        "Built in two days with an agent-driven ticket workflow: 87 commits, test-first, stacked PRs."
+      ],
+      "stack": ["TypeScript", "Next.js", "Convex", "Claude"],
+      "repo": "https://github.com/BinayakDotel/dekko-monorepo"
+    },
+    {
+      "id": "skills",
+      "name": "Skills Marketplace",
+      "kind": "Open repository",
+      "year": "2026",
+      "desc": "Agent Skills (SKILL.md files) for Claude and other AI agents, published in one place.",
+      "did": [
+        "Reusable instructions packaged as SKILL.md files.",
+        "Written for Claude and usable by other agents."
+      ],
+      "stack": ["Python", "SKILL.md"],
+      "repo": "https://github.com/BinayakDotel/skills-marketplace"
+    },
+    {
+      "id": "pasal",
+      "name": "Mero Pasal",
+      "kind": "Web app for phones",
+      "year": "2026",
+      "desc": "Turns a Kathmandu kirana shop’s paper bills into a searchable digital bill book.",
+      "did": [
+        "Works on a phone as a progressive web app (PWA).",
+        "Replaces the drawer of paper bills with something you can search."
+      ],
+      "stack": ["TypeScript", "PWA"],
+      "repo": "https://github.com/BinayakDotel/mero-pasal"
+    },
+    {
+      "id": "chroma",
+      "name": "Chroma Rush",
+      "kind": "Game on CrazyGames",
+      "year": "2026",
+      "desc": "A colour-matching endless runner in Godot 4.",
+      "did": [
+        "Used CrazyGames player metrics (playtime, return rate) to find where players left.",
+        "Shipped update 1.0.1: new players start on the road, calmer screen shake, a free shield and a gentler first minute."
+      ],
+      "stack": ["Godot 4", "GDScript"],
+      "repo": "https://github.com/BinayakDotel/chroma-rush"
+    }
+  ],
+  "experience": [
+    {
+      "id": "wh",
+      "years": "2022 – 2026",
+      "title": "Senior software engineer",
+      "org": "WhiteHat Engineering",
+      "summary": "A US-based company. I worked remotely from Nepal on client systems and internal tools.",
+      "bullets": [
+        "A call-review service for an AI voice agent that screens insurance leads.",
+        "California CCPA handling for deletion and do-not-sell requests.",
+        "Document Q&A where every answer cites its source, and incomplete records go to a person.",
+        "Infrastructure that runs many Claude Code agents unattended for Stoke.",
+        "A prompt-to-film pipeline that cut 80–200 hours of pre-production to about two."
+      ]
+    },
+    {
+      "id": "aastav",
+      "years": "2020 – 2022",
+      "title": "Unity game developer (freelance)",
+      "org": "Aastav",
+      "summary": "Shipped and maintained several published mobile games: custom UI, Firebase backend, in-app purchases and ad monetization.",
+      "bullets": []
+    },
+    {
+      "id": "edu",
+      "years": "2017 – 2022",
+      "title": "B.E. Software Engineering",
+      "org": "Nepal College of Information Technology",
+      "summary": "CGPA 3.9 / 4.0, Faculty Topper. NEXT Hackathon, 1st runner-up, for an augmented-reality education app. Final-year project: SRGAN image super-resolution.",
+      "bullets": []
+    }
+  ],
+  "skills": [
+    {
+      "group": "Build backends",
+      "items": [
+        { "name": "Python", "note": "Skills Marketplace, FastAPI services, and the SRGAN project." },
+        { "name": "FastAPI", "note": "The insurance document assistant and client services." },
+        { "name": "Node.js and Bun", "note": "Agent infrastructure for Stoke." },
+        { "name": "REST and webhooks", "note": "Slack, Linear and GitHub integrations." },
+        { "name": "PostgreSQL", "note": "Data layers for client systems." },
+        { "name": "Docker and CI/CD", "note": "Deploys, and regression runs on every change." }
+      ]
+    },
+    {
+      "group": "Agents and AI",
+      "items": [
+        { "name": "Anthropic and OpenAI APIs", "note": "Call review, agent infrastructure and the prompt-to-film pipeline." },
+        { "name": "RAG with citations", "note": "Policy and claims Q&A where every answer shows its source." },
+        { "name": "LLM evals", "note": "Labelled test sets, regression runs and decision logs." },
+        { "name": "MCP servers", "note": "Tools for unattended agents at Stoke." },
+        { "name": "Claude Code", "note": "Daily use, and headless agents running from Slack and Linear." }
+      ]
+    },
+    {
+      "group": "Games and front end",
+      "items": [
+        { "name": "Unity and C#", "note": "Published mobile games at Aastav." },
+        { "name": "Godot 4 and GDScript", "note": "Chroma Rush." },
+        { "name": "React and Next.js", "note": "Dekko and live dashboards." },
+        { "name": "Convex", "note": "Dekko and the Stoke live dashboard." },
+        { "name": "Firebase", "note": "Backends and in-app purchases for mobile games." }
+      ]
+    }
+  ],
+  "qa": [
+    {
+      "id": "build",
+      "q": "What do you build?",
+      "keywords": ["build", "make", "skills", "stack", "tech", "languages", "expertise", "specialize"],
+      "blocks": [
+        { "t": "p", "text": "Backends, AI agents and games. At work that means services and agent systems for US clients. Outside work it means small tools and games I publish." },
+        { "t": "tags", "items": ["Python", "FastAPI", "Node.js and Bun", "LLM evals", "Claude Code", "Unity", "Godot"] },
+        { "t": "src", "text": "From my CV and GitHub." }
+      ]
+    },
+    {
+      "id": "proj",
+      "q": "Show me your projects",
+      "keywords": ["project", "projects", "github", "portfolio", "side", "open", "source", "repo"],
+      "blocks": [
+        { "t": "p", "text": "Four that I built and kept. Each one links to its code." },
+        { "t": "projects", "ids": ["dekko", "skills", "pasal", "chroma"] },
+        { "t": "src", "text": "Dekko: 87 commits in two days, test-first. Chroma Rush: update 1.0.1 came from CrazyGames player metrics." }
+      ]
+    },
+    {
+      "id": "wh",
+      "q": "What did you do at WhiteHat?",
+      "keywords": ["whitehat", "work", "job", "experience", "company", "career", "insurance", "stoke", "ccpa"],
+      "blocks": [
+        { "t": "h", "text": "WhiteHat Engineering, 2022–2026" },
+        { "t": "p", "text": "A US-based company. I worked remotely from Nepal on client systems and internal tools." },
+        { "t": "experience", "id": "wh" },
+        { "t": "src", "text": "From my CV." }
+      ]
+    },
+    {
+      "id": "agents",
+      "q": "Can you work on AI agents?",
+      "keywords": ["agent", "agents", "ai", "llm", "rag", "claude", "mcp", "eval", "evals"],
+      "blocks": [
+        { "t": "p", "text": "Yes, it’s most of my current work." },
+        {
+          "t": "ul",
+          "items": [
+            "Infrastructure that runs many Claude Code agents unattended, from Slack and Linear.",
+            "Document Q&A with citations, where incomplete records go to a person.",
+            "A call-review service for an AI voice agent.",
+            "Labelled test sets and regression runs for LLM evals."
+          ]
+        },
+        { "t": "tags", "items": ["Anthropic and OpenAI APIs", "RAG with citations", "LLM evals", "MCP servers", "Claude Code"] }
+      ]
+    },
+    {
+      "id": "games",
+      "q": "Do you make games?",
+      "keywords": ["game", "games", "unity", "godot", "crazygames", "play"],
+      "blocks": [
+        { "t": "p", "text": "Yes. Two years as a freelance Unity developer for Aastav: several published mobile games with custom UI, a Firebase backend, in-app purchases and ads. Now Chroma Rush, a Godot 4 runner on CrazyGames." },
+        { "t": "projects", "ids": ["chroma"] }
+      ]
+    },
+    {
+      "id": "bg",
+      "q": "What’s your background?",
+      "keywords": ["background", "education", "study", "college", "degree", "school", "gpa", "cgpa", "hackathon", "srgan"],
+      "blocks": [
+        { "t": "p", "text": "B.E. in Software Engineering from Nepal College of Information Technology, 2017–2022. CGPA 3.9 / 4.0, Faculty Topper." },
+        {
+          "t": "ul",
+          "items": [
+            "NEXT Hackathon, 1st runner-up, for an augmented-reality education app.",
+            "Final-year project: SRGAN image super-resolution."
+          ]
+        },
+        { "t": "src", "text": "Then freelance Unity work, then WhiteHat." }
+      ]
+    },
+    {
+      "id": "hi",
+      "q": "How do I contact you?",
+      "keywords": ["contact", "email", "hire", "hiring", "reach", "talk", "available", "availability", "open"],
+      "blocks": [
+        { "t": "p", "text": "I’m open to backend, agent and game-tools roles, remote or in the Kathmandu Valley. I reply within a day, Nepal time (UTC+5:45)." },
+        { "t": "mail" },
+        { "t": "links" }
+      ]
+    }
+  ],
+  "noAnswer": [
+    { "t": "p", "text": "I don’t have a ready answer for that one. Try a question from the list, or email me and I’ll reply." },
+    { "t": "mail" }
+  ]
+}

@@ -1,33 +1,57 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import type { Metadata, Viewport } from "next";
+import localFont from "next/font/local";
+import { content } from "@/lib/content";
+import { MODE_SCRIPT } from "@/lib/mode";
+import { Footer } from "@/components/Footer";
+import { Header } from "@/components/Header";
+import { PaletteProvider } from "@/components/Palette";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const hanken = localFont({
+  src: "./fonts/HankenGrotesk-latin-wght.woff2",
+  weight: "100 900",
+  variable: "--font-hanken",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Binayak's Portfolio",
-  description: "Personal portfolio website showcasing my work and experience",
+  metadataBase: new URL(content.site.url),
+  title: { default: `${content.site.title}: portfolio`, template: `%s | ${content.site.title}` },
+  description: content.site.description,
+  openGraph: {
+    title: content.site.title,
+    description: content.site.description,
+    type: "website",
+  },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export const viewport: Viewport = {
+  colorScheme: "light dark",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#f6f8f6" },
+    { media: "(prefers-color-scheme: dark)", color: "#0b130f" },
+  ],
+};
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="dark">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white dark:bg-gray-900`}
-      >
-        {children}
+    <html lang="en" className={hanken.variable} suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: MODE_SCRIPT }} />
+      </head>
+      <body>
+        <PaletteProvider>
+          <a className="skip" href="#main">
+            Skip to content
+          </a>
+          <div id="page">
+            <Header />
+            <main id="main" tabIndex={-1}>
+              {children}
+            </main>
+            <Footer />
+          </div>
+        </PaletteProvider>
       </body>
     </html>
   );

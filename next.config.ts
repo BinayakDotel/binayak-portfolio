@@ -1,19 +1,14 @@
-import type { NextConfig } from 'next';
+import type { NextConfig } from "next";
+
+const basePath = "/binayak-portfolio";
 
 const nextConfig: NextConfig = {
-  output: 'export',
-  basePath: '/binayak-portfolio',
-  assetPrefix: '/binayak-portfolio/',
-  images: {
-    unoptimized: true,
-  },
-  webpack: (config) => {
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      'pdfjs-dist': 'pdfjs-dist/legacy/build/pdf',
-    };
-    return config;
-  },
+  output: "export",
+  basePath,
+  assetPrefix: `${basePath}/`,
+  trailingSlash: true,
+  images: { unoptimized: true },
+  env: { NEXT_PUBLIC_BASE_PATH: basePath },
 };
 
 export default nextConfig;

@@ -31,6 +31,8 @@ export interface Job {
   org: string;
   summary: string;
   bullets: string[];
+  /** Products worked on in this role. */
+  products?: { name: string; url: string; desc: string }[];
 }
 
 export interface SkillGroup {

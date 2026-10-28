@@ -1,5 +1,6 @@
 import { asset, content, job, project, type Block } from "@/lib/content";
 import { ProjectArt } from "./ProjectArt";
+import { Products } from "./Products";
 
 /** Renders an answer. Each block is one paragraph, list, tag row or card set from portfolio.json. */
 export function Blocks({ blocks }: { blocks: Block[] }) {
@@ -37,11 +38,14 @@ export function Blocks({ blocks }: { blocks: Block[] }) {
           case "experience": {
             const j = job(b.id);
             return j ? (
-              <ul key={i}>
-                {j.bullets.map((t) => (
-                  <li key={t}>{t}</li>
-                ))}
-              </ul>
+              <div key={i}>
+                <ul>
+                  {j.bullets.map((t) => (
+                    <li key={t}>{t}</li>
+                  ))}
+                </ul>
+                <Products items={j.products} />
+              </div>
             ) : null;
           }
           case "projects":

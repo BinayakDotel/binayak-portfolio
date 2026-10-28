@@ -71,7 +71,10 @@ function blockText(b: Block, data: Portfolio): string {
     case "tags":
       return b.items.join(" ");
     case "experience":
-      return data.experience.find((j) => j.id === b.id)?.bullets.join(" ") ?? "";
+{
+      const j = data.experience.find((x) => x.id === b.id);
+      return [...(j?.bullets ?? []), ...(j?.products ?? []).map((p) => `${p.name} ${p.desc}`)].join(" ");
+    }
     case "projects":
       return b.ids.map((id) => data.projects.find((p) => p.id === id)?.desc ?? "").join(" ");
     default:

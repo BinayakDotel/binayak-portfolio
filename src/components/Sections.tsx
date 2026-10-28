@@ -3,6 +3,7 @@ import { asset, content, section, type SectionInfo } from "@/lib/content";
 import { AskPanel } from "./AskPanel";
 import { CopyButton } from "./CopyButton";
 import { ProjectArt } from "./ProjectArt";
+import { Products } from "./Products";
 
 /** One block of the page: a label column on the left, the content on the right. */
 export function Section({
@@ -88,6 +89,7 @@ export function ExperienceList() {
                 ))}
               </ul>
             )}
+            <Products items={j.products} />
           </div>
         </article>
       ))}

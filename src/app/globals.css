@@ -334,3 +334,11 @@ main:focus { outline: none; }
   .clist .k { grid-column: 1 / -1; }
 }
 @media (hover: none) { .btn kbd { display: none; } }
+
+/* products worked on, under a job */
+.prods { margin-top: 16px; }
+.prods h4 { font-size: 15px; color: var(--mute); font-weight: 500; letter-spacing: 0; margin-bottom: 6px; }
+.prods ul { list-style: none; margin: 0; padding: 0; }
+.prods li { margin: 0 0 6px; }
+.prods a { font-weight: 550; text-underline-offset: 3px; text-decoration-color: var(--acc); }
+.prods span { display: block; color: var(--mute); font-size: 14.5px; line-height: 1.45; }

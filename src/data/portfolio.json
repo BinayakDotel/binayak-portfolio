@@ -17,8 +17,8 @@
     "lede": "Software engineer with 4+ years of experience. I build AI agent systems, softwares, backend services. In my own time I still make games and small tools and products that solves real problems",
     "facts": [
       {
-        "label": "Now",
-        "value": "Senior software engineer at WhiteHat Engineering"
+        "label": "Last role",
+        "value": "Senior software engineer at WhiteHat Engineering, 2022–2026"
       },
       {
         "label": "Based in",
@@ -261,7 +261,7 @@
       "blocks": [
         {
           "t": "p",
-          "text": "I’m Binayak Dotel, a software engineer in Bhaktapur, Nepal. For the last four years I’ve worked remotely for WhiteHat Engineering, a US company, building AI agent systems and backend services. Before that I built published Unity mobile games. In my own time I make games and small tools."
+          "text": "I’m Binayak Dotel, a software engineer in Bhaktapur, Nepal. From 2022 to 2026 I worked remotely for WhiteHat Engineering, a US company, building AI agent systems and backend services. Before that I built published Unity mobile games. In my own time I make games and small tools."
         },
         {
           "t": "tags",
@@ -329,7 +329,7 @@
       "blocks": [
         {
           "t": "p",
-          "text": "It’s most of my current work."
+          "text": "It was most of my work at WhiteHat."
         },
         {
           "t": "ul",
@@ -478,7 +478,7 @@
       "blocks": [
         {
           "t": "p",
-          "text": "Yes. Since 2022 I’ve worked remotely from Nepal (UTC+5:45) for WhiteHat Engineering, a US-based company, on client systems and internal tools. That includes integrations with Slack, Linear and GitHub."
+          "text": "Yes. From 2022 to 2026 I worked remotely from Nepal (UTC+5:45) for WhiteHat Engineering, a US-based company, on client systems and internal tools. That includes integrations with Slack, Linear and GitHub."
         }
       ]
     },
@@ -729,7 +729,7 @@
           "t": "ul",
           "items": [
             "Every day, as part of how I build.",
-            "I run headless agents from Slack and Linear.",
+            "At WhiteHat I ran headless agents from Slack and Linear.",
             "Dekko was built through an agent-driven ticket workflow: test-first, with stacked pull requests."
           ]
         }

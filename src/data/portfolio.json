@@ -35,7 +35,7 @@
     {
       "id": "work",
       "label": "Work",
-      "note": "Four projects I built and kept"
+      "note": "Projects I built and maintained"
     },
     {
       "id": "experience",
@@ -103,7 +103,7 @@
       "name": "Mero Pasal",
       "kind": "Web app for phones",
       "year": "2026",
-      "desc": "Turns a Kathmandu kirana shop’s paper bills into a searchable digital bill book.",
+      "desc": "I created this to turn my father's kirana shop’s paper bills into a searchable digital bill book.",
       "did": [
         "Shop owners keep paper bills in a drawer and can’t search them. I built a phone app that turns them into a searchable bill book.",
         "Built it as a progressive web app (PWA), so it installs and works on a phone without an app store."
